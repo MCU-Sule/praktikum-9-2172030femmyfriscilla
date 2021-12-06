@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Femmy Friscilla Susilo 2172030">
+    <title>Soal 2</title>
+</head>
+<style>
+ #nama{
+     width: 30px;
+     height: 20px;
+ }
+ 
+ 
+</style>
+<body>
+    <script>
+        document.write("<br>");
+        document.write("<table border='1' cellpadding='0' cellspacing='0'>");
+            document.write("<tr>");
+                document.write("<td width='60px'>Nama</td>");
+                document.write("<td width='80px'>Warna</td>");
+            document.write("</tr>");
+        document.write("</table>");
+        var bernama = []
+        var berwarna = []
+        while(true){
+        let nama = prompt("Masukkan Nama : ");
+        if (nama == "stop"){
+            break;
+        }
+        let warna = prompt("Masukkan warna kesukaan (english) : ");
+        if(nama != "stop"){
+        bernama.push(nama);
+        console.log(bernama);
+        berwarna.push(warna);
+        console.log(berwarna);
+        
+        document.write("<table border='1 black ' cellpadding='0' cellspacing='0'>");
+        document.write("<tr>");
+        document.write("<td width='140px'border='1'>");
+        document.write("<div style='width=140px; display:inline-flex;''>");
+        document.write ("<div style='border:black 1px;width:60px; background-color:"+warna+";'>"+nama+"</div>");
+        document.write("<div style='border:black 1px;width:80px; background-color:"+warna+";'>"+warna+"</div>");
+        document.write("</div width='140px'>");
+        document.write("</td>");
+        document.write("</tr>");
+        document.write("</table>");
+        }
+        }
+
+        let searching = prompt("warna yang ingin dicari ? :");
+        let menghitung = 0;
+        let isi = berwarna.includes(searching);
+        for(a=0;a<=berwarna.length;a++){
+            if(searching==berwarna[a]){
+                console.log(berwarna[a]);
+                console.log(menghitung);
+                menghitung++
+            }
+            else if(isi == false){
+                document.write("Tidak ada orang yang menyukai warna tersebut");  
+            }
+        }
+        document.write("Ada "+menghitung+" orang yang menyukai warna "+searching);
+    </script>
+</body>
+</html>

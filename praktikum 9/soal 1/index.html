@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Femmy Friscilla Susilo 212030">
+    <title>soal 1</title>
+</head>
+<style>
+    *{
+        margin: 0;
+    }
+    #bulet{
+            height: 60px;width: 60px;
+            display: inline-flex;
+            background-color: rgb(172, 172, 172);
+            border-radius: 30px;
+            font-size: 25px;
+            text-align: center;
+        }
+        #dalam{
+            padding-left: 15px;
+            padding-top: 15px;
+            color: black;
+        }
+        #biar_ditengah{
+            margin: auto;
+        }
+</style>
+<body>
+    <script>
+        function Bola(){
+            for (a=NxN;a>=1;a--){
+                if(urutan<=9){
+                document.write("<div id='bulet'><p id='dalam'>0"+urutan+"</p></div>");
+                urutan= urutan-1;
+                }
+                else{
+                document.write("<div id='bulet'><p id='dalam'>"+urutan+"</p></div>");
+                urutan= urutan-1;
+                } 
+            }
+        }
+    </script>
+    <script>
+        
+        let NxN = parseInt(prompt("Berapa NxN bola yang ingin dibuat? "))
+        let urutan;
+        urutan=NxN * NxN;
+        for(b=NxN;b>=1;b--){
+            document.write("<div id='biar_ditengah' style='width:"+60*NxN+"px; height:"+60+"px;'>");
+            document.write("<tr>");
+            Bola();
+            document.write("</tr>")
+            document.write("</div>");
+        }
+        
+        
+        
+    </script>
+</body>
+</html>

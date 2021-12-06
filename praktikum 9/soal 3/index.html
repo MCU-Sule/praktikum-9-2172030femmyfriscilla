@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Femmy Friscilla Susilo 2172030">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        width: 100%;
+        text-align: center;
+    }
+</style>
+<body>
+    <script>
+        let array = [];
+        document.write("<table border='1' cellpadding='0' cellspacing='0'>")
+        let urutan;
+        urutan=0
+            for(b=1;b<=5;b++){
+                document.write("<tr>")
+                for(c=1;c<=5;c++){
+                    document.write("<td id='kotak-"+urutan+"'>"+urutan+"</td>");
+                    urutan ++
+                }
+                document.write("</tr>");
+            }
+                let input = parseInt(prompt("Masukkan obstacle :"))             
+                for(d=0;d<input;d++){ 
+                    let gacha = Math.floor(Math.random()*25);
+                    while(true){                                    
+                    console.log(array.includes(gacha));                   
+                    if(array.includes(gacha)== false){
+                    array.push(gacha);
+                    console.log(gacha);  
+                    let ngewarnain;
+                    ngewarnain = document.getElementById("kotak-"+gacha).style
+                    ngewarnain.backgroundColor='#6a040f';
+                    document.getElementById("kotak-"+gacha).style
+                    ngewarnain.color='white';
+                    break
+                    }
+                    else{
+                        gacha = Math.floor(Math.random()*25);
+                    }
+                    
+                }
+                }
+                console.log(array);
+                document.write("</table>");
+            
+        
+            
+        
+    </script> 
+</body>
+</html>
